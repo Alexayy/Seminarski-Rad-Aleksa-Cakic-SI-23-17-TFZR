@@ -1,0 +1,31 @@
+<table class="table table-dark table-striped table-sm table-hover">
+
+<thead>
+  <tr>
+    <th scope="col">Ime</th>
+    <th scope="col">Prezime</th>
+    <th scope="col">Broj</th>
+    <th scope="col">Tim</th>
+    <th scope="col">Godiste</th>
+  </tr>
+</thead>
+ <tbody>
+  <tr *ngFor="let igrac of igracservice.ListaIgraca">
+    <td>{{ igrac.igrac_ime }}</td>
+    <td>{{ igrac.igrac_prezime }}</td>
+    <td>{{ igrac.igrac_broj }}</td>
+    <td>{{ igrac.igrac_tim }}</td>
+    <td>{{ igrac.igrac_godiste }}</td>
+
+    <td>
+      <a class="btn btn-warning" (click)="showEdit(igrac)">
+        <i class="fa fa-pencil"></i>
+      </a>
+      <a class="btn btn-danger" (click)="onDelete(igrac.igrac_id)">
+        <i class="fa fa-trash"></i>
+      </a>
+    </td>
+  </tr>
+ </tbody>
+
+</table>

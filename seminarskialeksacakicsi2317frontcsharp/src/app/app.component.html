@@ -1,0 +1,46 @@
+<div class="container" style="text-align: center;">
+
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="#">
+      <img src="chrome://branding/content/about-logo.png" width="30" height="30" class="d-inline-block align-top" alt=""
+        loading="lazy">
+      Seminarski Rad
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item active">
+          <a class="nav-link" href="/">Glavna<span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/igraci" routerLinkActive="active">Igraci</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/timovi" routerLinkActive="active">Timovi</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  <div class="jumbotron jumbotron-fluid">
+    <div class="jumbotron">
+      <h1 class="display-4">Seminarski rad</h1>
+      <p class="lead">Tema: Upoređivanje gramatike programskog jezika C# i Java na primeru objektno-orjentisane aplikacije uz primenu baze podataka. TIP 5/a-  40 bodova</p>
+      <hr class="my-4">
+      <picture>
+        <img src="http://www.tfzr.uns.ac.rs/Content/images/headimage09.jpg" class="img-fluid" alt="Responsive image">
+      </picture>
+      <p>
+        Front end i Back end aplikacija. Front end je uradjen u Angular 8. Back end je uradjen u ASP.NET. Baza podataka je MSSql koja je defaultna u C# projektima.
+        Vreme utroseno je svega par sati. Sledeca aplikacija je Java.
+      </p>
+      <a class="btn btn-primary btn-lg" href="http://www.tfzr.uns.ac.rs" role="button" target="blank_">Oficijelni Sajt</a>
+    </div>
+  </div>
+
+  <!-- ================== <app-igraci></app-igraci> ==================== -->
+</div>
+
+<router-outlet></router-outlet>

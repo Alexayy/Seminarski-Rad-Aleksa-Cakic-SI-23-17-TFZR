@@ -1,0 +1,28 @@
+<p>timovi-lista works!</p>
+<table class="table table-dark table-striped table-sm table-hover">
+
+  <thead>
+    <tr>
+      <th scope="col">Ime</th>
+      <th scope="col">Osnovan godine</th>
+      <th scope="col">Ime trenera</th>
+    </tr>
+  </thead>
+   <tbody>
+    <tr *ngFor="let tim of timservice.ListaTimova">
+      <td>{{ tim.tim_ime }}</td>
+      <td>{{ tim.tim_osnovan }}</td>
+      <td>{{ tim.tim_trener }}</td>
+
+      <td>
+        <a class="btn btn-warning" (click)="showEdit(tim)">
+          <i class="fa fa-pencil"></i>
+        </a>
+        <a class="btn btn-danger" (click)="onDelete(tim.tim_id)">
+          <i class="fa fa-trash"></i>
+        </a>
+      </td>
+    </tr>
+   </tbody>
+
+  </table>
