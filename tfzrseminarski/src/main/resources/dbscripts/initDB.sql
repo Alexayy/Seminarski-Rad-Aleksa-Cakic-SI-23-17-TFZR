@@ -14,9 +14,9 @@ create table "igrac"
     igrac_godiste integer
 );
 
-comment on table "Igrac" is 'Tabela igraca';
+comment on table "igrac" is 'Tabela igraca';
 
-alter table "Igrac"
+alter table "igrac"
     owner to postgres;
 
 create table tim
