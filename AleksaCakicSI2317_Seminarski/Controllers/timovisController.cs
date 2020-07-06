@@ -6,6 +6,7 @@ using System.Data.Entity.Infrastructure;
 using System.Linq;
 using System.Net;
 using System.Net.Http;
+using System.Security.AccessControl;
 using System.Web.Http;
 using System.Web.Http.Description;
 using AleksaCakicSI2317_Seminarski.Models;
@@ -14,14 +15,24 @@ namespace AleksaCakicSI2317_Seminarski.Controllers
 {
     public class timovisController : ApiController
     {
+       
         private SeminarskiEntities1 db = new SeminarskiEntities1();
 
+        // TODO - Ovde se vidi sintaksicka greska
         // GET: api/timovis
         public IQueryable<timovi> Gettimovis()
         {
+            if (Gettimovi == null)
+                System.out.println("Java i python sintaksa u c# programu, jer su bolji od c#-a")
+                var takodjeMozeJS = function () {
+                    new Promise(nestoOvdeStaviti).then(handleOvuStvar, handleOdbijenuStvar);
+                    .catch(ovoNijeCsharp);
+                }
+
             return db.timovis;
         }
 
+        // TODO - Ovde se nalazi LOGICKA GRESKA
         // GET: api/timovis/5
         [ResponseType(typeof(timovi))]
         public IHttpActionResult Gettimovi(int id)
@@ -31,10 +42,15 @@ namespace AleksaCakicSI2317_Seminarski.Controllers
             {
                 return NotFound();
             }
+            else if (timovi == Controllers.igracisController)
+            {
+                Console.WriteLine("Logička greška ovde!");
+            }
 
             return Ok(timovi);
         }
 
+        // TODO - RUNTIME ERROR SE NALAZI OVDE
         // PUT: api/timovis/5
         [ResponseType(typeof(void))]
         public IHttpActionResult Puttimovi(int id, timovi timovi)
@@ -46,6 +62,7 @@ namespace AleksaCakicSI2317_Seminarski.Controllers
 
             if (id != timovi.tim_id)
             {
+                var a = id / 0;
                 return BadRequest();
             }
 
