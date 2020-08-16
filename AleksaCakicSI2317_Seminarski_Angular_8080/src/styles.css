@@ -1,0 +1,12 @@
+/* You can add global styles to this file, and also import other style files */
+form.igrac-form {
+  background-color: gray;
+  padding: 10px;
+  border-radius: 4px;
+}
+
+form.tim-form {
+  background-color: gray;
+  padding: 10px;
+  border-radius: 4px;
+}
