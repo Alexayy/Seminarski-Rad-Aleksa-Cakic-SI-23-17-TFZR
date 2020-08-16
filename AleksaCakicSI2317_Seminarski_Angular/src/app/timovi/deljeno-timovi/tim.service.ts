@@ -17,21 +17,21 @@ ListaTimova : Timovi[];
     var body = JSON.stringify(tim);
     var headerpotion = new Headers({ "Content-Type" : "application/json" });
     var requestoption = new RequestOptions({ method : RequestMethod.Post, headers: headerpotion });
-    return this.http.post('http://localhost:8080/tim/timovis/napravi', body, requestoption).map(x => x.json());
-    // return this.http.post('https://localhost:44309/api/timovis', body, requestoption).map(x => x.json());
+    //return this.http.post('http://localhost:8080/tim/timovis/napravi', body, requestoption).map(x => x.json());
+     return this.http.post('https://localhost:44309/api/timovis', body, requestoption).map(x => x.json());
   }
 
   Puttimovi(id, tim) {
     var body = JSON.stringify(tim);
     var headerpotion = new Headers({ "Content-Type" : "application/json" });
     var requestoption = new RequestOptions({ method : RequestMethod.Put, headers: headerpotion });
-    return this.http.put('http://localhost:8080/tim/timovis/' + id, body, requestoption).map(x => x.json());
-    // return this.http.put('https://localhost:44309/api/timovis/' + id, body, requestoption).map(x => x.json());
+    //return this.http.put('http://localhost:8080/tim/timovis/' + id, body, requestoption).map(x => x.json());
+     return this.http.put('https://localhost:44309/api/timovis/' + id, body, requestoption).map(x => x.json());
   }
 
   GetTimovi() {
-    // this.http.get('https://localhost:44309/api/timovis').map((data : Response) => {
-      this.http.get('http://localhost:8080/tim/timovis').map((data : Response) => {
+     this.http.get('https://localhost:44309/api/timovis').map((data : Response) => {
+    //  this.http.get('http://localhost:8080/tim/timovis').map((data : Response) => {
       return data.json() as Timovi[];
     }).toPromise().then(x => {
       this.ListaTimova = x;
@@ -39,7 +39,7 @@ ListaTimova : Timovi[];
   }
 
   DeleteTim(id : number) {
-    // return this.http.delete('https://localhost:44309/api/timovis/' + id).map(res => res.json());
-    return this.http.delete('http://localhost:8080/tim/timovis/' + id).map(res => res.json());
+     return this.http.delete('https://localhost:44309/api/timovis/' + id).map(res => res.json());
+    //return this.http.delete('http://localhost:8080/tim/timovis/' + id).map(res => res.json());
   }
 }

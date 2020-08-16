@@ -1,4 +1,4 @@
-﻿// T4 code generation is enabled for model 'C:\Users\aleksa\source\repos\AleksaCakicSI2317_Seminarski\Models\IgraciModel.edmx'. 
+﻿// T4 code generation is enabled for model 'C:\Users\alex\Desktop\Seminarski-Rad-Aleksa-Cakic-SI-23-17-TFZR\AleksaCakicSI2317_Seminarski_Csharp\Models\IgraciModel.edmx'. 
 // To enable legacy code generation, change the value of the 'Code Generation Strategy' designer
 // property to 'Legacy ObjectContext'. This property is available in the Properties Window when the model
 // is open in the designer.
