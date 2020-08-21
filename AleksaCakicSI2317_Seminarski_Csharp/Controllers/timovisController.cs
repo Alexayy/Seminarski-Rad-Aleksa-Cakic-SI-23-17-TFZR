@@ -7,11 +7,13 @@ using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Web.Http;
+using System.Web.Http.Cors;
 using System.Web.Http.Description;
 using AleksaCakicSI2317_Seminarski.Models;
 
 namespace AleksaCakicSI2317_Seminarski.Controllers
 {
+    [EnableCors(origins: "*", headers: "*", methods: "*")]
     public class timovisController : ApiController
     {
         private SeminarskiEntities1 db = new SeminarskiEntities1();

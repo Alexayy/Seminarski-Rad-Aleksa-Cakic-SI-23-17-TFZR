@@ -13,6 +13,7 @@ using System.Web.Http.Cors;
 
 namespace AleksaCakicSI2317_Seminarski.Controllers
 {
+    [EnableCors(origins: "*", headers: "*", methods: "*")]
     public class igracisController : ApiController
     {
         private SeminarskiEntities db = new SeminarskiEntities();

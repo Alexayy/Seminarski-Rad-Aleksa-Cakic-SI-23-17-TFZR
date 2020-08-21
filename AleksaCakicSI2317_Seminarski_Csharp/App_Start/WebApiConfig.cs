@@ -1,4 +1,6 @@
-﻿using System.Web.Http;
+﻿using System.Data.Entity.Core.Objects;
+using System.Security.AccessControl;
+using System.Web.Http;
 using System.Web.Http.Cors;
 
 namespace AleksaCakicSI2317_Seminarski
@@ -8,8 +10,7 @@ namespace AleksaCakicSI2317_Seminarski
         public static void Register(HttpConfiguration config)
         {
             // Web API configuration and services https://localhost:44309/
-            config.EnableCors(new EnableCorsAttribute(headers: "*", methods: "*", origins: "*"));
-
+            config.EnableCors();
             // Web API routes
             config.MapHttpAttributeRoutes();
 

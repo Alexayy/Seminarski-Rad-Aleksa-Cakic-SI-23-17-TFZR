@@ -25,7 +25,7 @@ ListaIgraca : Igraci[];
     var body = JSON.stringify(igrac);
     var headerpotion = new Headers({ "Content-Type" : "application/json" });
     var requestoption = new RequestOptions({ method : RequestMethod.Put, headers: headerpotion });
-    return this.http.put('https://localhost:44309/api/igracis/' + id, body, requestoption).map(x => x.json());
+    return this.http.put('https://localhost:44309/api/igracis' + id, body, requestoption).map(x => x.json());
     //return this.http.put('http://localhost:8080/api/igracis/' + id, body, requestoption).map(x => x.json());
   }
 
