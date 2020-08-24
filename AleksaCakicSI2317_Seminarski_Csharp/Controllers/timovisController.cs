@@ -31,6 +31,7 @@ namespace AleksaCakicSI2317_Seminarski.Controllers
             timovi timovi = db.timovis.Find(id);
             if (timovi == null)
             {
+                IHttpActionResult($aleksa);
                 return NotFound();
             }
 

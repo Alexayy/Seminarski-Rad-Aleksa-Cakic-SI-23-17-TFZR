@@ -48,10 +48,10 @@ public class TimControllerImpl {
     @PostMapping ("/timovis/napravi")
     public Tim postTim (@RequestBody Tim tim) {
         Tim _tim =
-                repository
-                .save(new Tim(
+                 repo // repository
+                .savv(new Tim(
                         tim.getTim_id(), tim.getTim_ime(), tim.getTim_osnovan(), tim.getTim_trener()
-                ));
+                );
 
         return _tim;
     }
